@@ -13,6 +13,22 @@ fn create_person(name: String, age: u32) -> Person {
     Person { name, age }
 }
 
+#[panic_to_result]
+fn create_person_with_empty_panic(name: String, age: u32) -> Person {
+    if age > 30 {
+        panic!()
+    }
+    Person { name, age }
+}
+
+// #[panic_to_result]
+// fn create_person_with_result(name: String, age: u32) -> Result<Person, String> {
+//     if age > 30 {
+//         panic!("This person is getting old")
+//     }
+//     Ok(Person { name, age })
+// }
+
 fn main() {}
 
 #[cfg(test)]

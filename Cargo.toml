@@ -3,3 +3,4 @@ members=[
     "panic-to-result-macro",
     "panic-to-result-usage"
 ]
+resolver="3"
